@@ -82,4 +82,4 @@ dataset.new.grouped <- dplyr::group_by(dataset.new, subject, activity)
 data.mean <- as.data.frame(dplyr::summarise_all(dataset.new.grouped, .funs = mean))
 # dim(data.mean)
 # 180 68
-write.table(data.mean, "tidy_data_average.txt")
+write.table(data.mean, "tidy_data_average.txt", row.names = FALSE)
